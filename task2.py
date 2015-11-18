@@ -16,7 +16,6 @@ with open('dict.txt', 'r') as vocab:
             noun_amount += 1
         else:
             verb_amount += 1
-print(adj_amount)
 adj_comb = (lambda n: sum(map(lambda k: reduce(mul, range(n-k+1, n+1), 1), range(n+1))))(adj_amount)
 sentences = adj_comb*noun_amount*verb_amount
 print(sentences)
